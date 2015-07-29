@@ -23,15 +23,7 @@ class Moore(object):
 
     def __chg2list(self, grid):
         line = []
-        matrix = []
-        try:
-            for row in grid:
-                for el in row:
-                    line.append(el)
-                matrix.append(line)
-                line = []
-        except TypeError:
-            pass
+        matrix = [el for row in grid for el in row]
         return matrix
 
     def __fndcoor(self, coor):
